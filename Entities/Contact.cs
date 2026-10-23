@@ -14,8 +14,7 @@ namespace AgendaApi.Entities
         public int Phone { get; set; }
         public string ?Email { get; set; }
         public string ?Adress { get; set; }
-        public string? Company { get; set; }
-        public string Description { get; set; } = String.Empty;
+        public string? Description { get; set; }
         [ForeignKey("UserId")]
         public User? User { get; set; }
         public int UserId { get; set; }

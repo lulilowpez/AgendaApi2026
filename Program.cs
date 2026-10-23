@@ -1,4 +1,10 @@
+using AgendaApi.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<AgendaApiContext>(dbContextOptions => dbContextOptions
+.UseSqlite(builder.Configuration["ConnectionStrings:AgendaApiDBConnectionString"]));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

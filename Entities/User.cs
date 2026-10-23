@@ -16,7 +16,7 @@ namespace AgendaApi.Entities
         public string Email { get; set; } = String.Empty;
         public string Password { get; set; } = String.Empty;
 
-        //public ICollection<Contact> Contacts { get; set; }
+        public ICollection<Contact> Contacts { get; set; }
         public State State { get; set; } = State.Active;
     }
 }
